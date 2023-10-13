@@ -5,11 +5,14 @@ int main(void){
 int num;
 int res;
 int opcion;
+int i;
+int s=0;
 do
 {
     printf("Seleccione una de las opciones\n");
     printf("Opcion 1. Suma de Gauss\n");
-    printf("Opcion 2. Salir\n");
+    printf("Opcion 2. Suma de Gauss con for\n");
+    printf("Opcion 3. Salir\n");
     scanf("%d", &opcion);
 
     switch (opcion)
@@ -32,13 +35,28 @@ do
     
 
     break;
-    
+
     case 2:
+    printf("El numero tiene que ser un entero positivo\n");
+    printf("Coloque un numero \n");
+    scanf("%d", &num);
+
+    for ( i = 1; i<=num; i++)
+    {
+    
+    s=s+i;
+        
+    }
+    printf("El resultado de la suma es: %d\n", s);
+    
+    break;
+    
+    case 3:
     printf("Elijio la opcion salir\n");
         
     }
 
-} while (opcion !=2);
+} while (opcion !=3);
 
 
 }
